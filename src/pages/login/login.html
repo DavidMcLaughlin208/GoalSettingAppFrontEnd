@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-title>
+        Login
+    </ion-title>
+</ion-header>
+
+<ion-content>
+    <h3 padding>Login</h3>
+    <p padding ion-text color="danger" *ngIf="showError">The username and password combination are not valid.</p>
+    <form (ngSubmit)="onSubmit()">
+        <ion-item>
+            <ion-label>Username</ion-label>
+            <ion-input type="text" [(ngModel)]="credentials.username" name="username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="credentials.password" name="password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button ion-button>
+                Submit
+            </button>
+        </ion-item>
+    </form>
+</ion-content>
